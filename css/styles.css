@@ -1,0 +1,184 @@
+/******************************************************
+
+GENERAL STYLE ELEMENTS
+
+*******************************************************/
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Wisdom;
+    src: url(fonts/wisdom.otf);
+}
+
+a {
+   outline: 0 !important;
+}
+
+/* Fonts */
+/*This defines Semantic Elements as blocks for older browsers  */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+/******************************************************
+
+MEDIA
+
+*******************************************************/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body { line-height: 1.4 }
+}
+
+/******************************************************
+
+HEADER
+
+*******************************************************/
+
+body {
+	background-color: #363636;
+}
+
+
+header {
+    background-color: rgb(55, 65, 66);
+    min-height: 720px;
+    /*margin-top: 70px;*/
+    background: url("/Users/ThedWord/Desktop/cardealership/images/hero_Jaguar F_Type.jpg") no-repeat scroll;
+    background-size: 100% 100%;
+}
+
+  
+  /* Navigation bar styles start */
+  
+  nav {
+      height: 45px;
+      width: 100%;
+      margin-bottom: 5px;
+      margin-top: 20px;
+      padding-left: 5px;
+  }
+  nav ul {
+      list-style: none;
+      padding: 0px;
+  }
+  nav ul li {
+      display: block;
+  }
+  nav ul li > a {
+      text-decoration:none;
+  }
+  nav ul li > a:hover {
+      text-decoration:underline;
+  }
+  .navbar-background {
+      background-color: rgb(17, 15, 15);
+  }
+  .navlink {
+      height: 35px;
+      margin-right: 10px;
+      font-size: 18px;
+      float: left;
+      padding-left:5px;
+      padding-right:5px;
+      padding-top: 12px;
+      color: white;
+      text-decoration: none;
+  }
+  .navlink.active {
+      color: red;
+      background-color: white;
+  }
+  /* Navigation bar styles end */
+  
+  /* Navigation bar styles end */
+
+  /* Inventory */
+ /* img {
+
+  }*/
+
+  .thumbnail {
+    height: 100%;
+}
+
+.thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid rgb(54, 50, 50);
+}
+  
+ul.footer_social {
+    list-style: outside none none;
+    margin-left: 0;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+ul.footer_social li {
+    float: left;
+    height: 45px;
+    margin-right: 10px;
+    width: 45px;
+}
+
+p.copyright {
+    color: #97a0a7;
+    float: right;
+    font-family: RobotoRegular,Arial;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+a.go_top {
+    color: #ffffff;
+    float: right;
+    font-family: RobotoRegular,Arial;
+    font-size: 13px;
+    height: 42px;
+    margin-left: 15px;
+    margin-top: 18px;
+    width: 42px;
+}
+
+p.copyright a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+p.copyright a:hover {
+    color: #777777;
+}
+
+/* images */
+a.thumbnail img {
+    width: 330px;
+    height: 130px;
+}
+
+div.item img {
+    width: 1168px;
+    height: 1836px;
+
+}
