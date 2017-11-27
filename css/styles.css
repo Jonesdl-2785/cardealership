@@ -6,22 +6,27 @@ GENERAL STYLE ELEMENTS
 
 @font-face {
     font-family: RobotoMedium;
-    src: url(fonts/Roboto-Medium.ttf);
+    src: url(fonts/Roboto-Medium-webfont.ttf);
 }
 
 @font-face {
     font-family: RobotoLight;
-    src: url(fonts/Roboto-Light.ttf);
+    src: url(fonts/Roboto-Light-webfont.ttf);
 }
 
 @font-face {
     font-family: RobotoBold;
-    src: url(fonts/Roboto-Bold.ttf);
+    src: url(fonts/Roboto-Bold-webfont.ttf);
 }
 
 @font-face {
     font-family: RobotoRegular;
-    src: url(fonts/Roboto-Regular.ttf);
+    src: url(fonts/Roboto-Regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url(fonts/Oswald-Bold.ttf);
 }
 
 @font-face {
@@ -29,15 +34,7 @@ GENERAL STYLE ELEMENTS
     src: url(fonts/wisdom.otf);
 }
 
-@font-face {
-  font-family: Oswald;
-  @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono');
-}
-
-@font-face {
-  font-family: Robot;
-  @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed|Roboto+Mono');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab');
 
 a {
    outline: 0 !important;
