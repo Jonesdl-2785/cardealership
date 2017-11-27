@@ -29,6 +29,16 @@ GENERAL STYLE ELEMENTS
     src: url(fonts/wisdom.otf);
 }
 
+@font-face {
+  font-family: Oswald;
+  @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono');
+}
+
+@font-face {
+  font-family: Robot;
+  @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed|Roboto+Mono');
+}
+
 a {
    outline: 0 !important;
 }
@@ -58,33 +68,51 @@ HEADER
 
 body {
 	background-color: #363636;
+  font-family: 'Roboto Regular', sans-serif;
+  src: url(fonts/Roboto-Regular.ttf);
+  width: 100%;
+  height: 100%;
 }
 
+p {
+  font-size: 1em;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 
 header {
-    background-color: rgb(55, 65, 66);
+    /*background-color: rgb(55, 65, 66);*/
     min-height: 720px;
     /*margin-top: 70px;*/
-    background: url("/Users/ThedWord/Desktop/cardealership/images/hero_Jaguar F_Type.jpg") no-repeat scroll;
-    background-size: 100% 100%;
+    /*background: url("/Users/ThedWord/Desktop/cardealership/images/hero_Jaguar F_Type.jpg") no-repeat scroll;*/
+    background-size: 100% 100%;*/
+
 }
 
-  
+header h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: inherit;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
   /* Navigation bar styles start */
-  
-  nav {
-      height: 45px;
+div.container-fluid {
+
+}
+nav {
+      height: 51px;
       width: 100%;
       margin-bottom: 5px;
-      margin-top: 20px;
+      margin-top: 1px;
       padding-left: 5px;
   }
   nav ul {
       list-style: none;
-      padding: 0px;
+      padding: 0px auto;
   }
   nav ul li {
-      display: block;
+      display: inline-block;
   }
   nav ul li > a {
       text-decoration:none;
@@ -92,11 +120,12 @@ header {
   nav ul li > a:hover {
       text-decoration:underline;
   }
-  .navbar-background {
+  #main-navbar {
       background-color: rgb(17, 15, 15);
   }
+
   .navlink {
-      height: 35px;
+      height: 45px;
       margin-right: 10px;
       font-size: 18px;
       float: left;
@@ -110,10 +139,134 @@ header {
       color: red;
       background-color: white;
   }
-  /* Navigation bar styles end */
-  
+
+  div.form-group {
+    width: 300px;
+    height: 50px;
+  }
+  input.form-control {
+    height: 50;
+    width: auto;
+  }
+
+  button.btn.btn-default {
+    height: 50;
+    width: auto;
+  }
   /* Navigation bar styles end */
 
+/* Video/Media-Heaven */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+/* Jumbotron */
+/*#bg-video {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+}
+.videotext {
+  z-index: 1;
+  position: absolute;
+} */
+/*.jumbotron {
+  background: rgba(128,128,128,0.5);
+  margin: 25vh 0;
+  overflow-y: hidden;
+  width: auto;
+}*/
+
+main {
+  /* Give the main content container a solid background color to hide the fixed position video */
+  background: #fff;
+  padding: 2em;
+}
+/*#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+.container h1 {
+    color: white;
+
+} */
+
+/* About */
+
+.container-a {
+  width: 100%;
+  height: 100%;
+}
+div#about.content {
+    background-color: #c0c0c0;
+    overflow: hidden;
+    height: 200%;
+}
+
+.content {
+  padding: 0px 10px 0px 10px;
+}
+.container-a p {
+    color: #000d1a;
+    width: 100%;
+    height: 100%;
+    font-family: 'RobotoLight', Verdana, sans-serif;
+}
+
+
+# about h1 {
+    color: #080845;
+    text-transform: capitalize;
+}
+}
   /* Inventory */
  /* img {
 
@@ -128,7 +281,7 @@ header {
     max-width: 100%;
     border: 1px solid rgb(54, 50, 50);
 }
-  
+
 ul.footer_social {
     list-style: outside none none;
     margin-left: 0;
@@ -181,4 +334,80 @@ div.item img {
     width: 1168px;
     height: 1836px;
 
+}
+
+/* inventory table */
+.dollars::before {
+    content: "$";
+}
+
+/* contact page */
+.formContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button.btn btn-default input[type=submit] {
+    background-color: rgb(26, 57, 26);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn btn-default input[type=submit]:hover {
+    background-color: #190369;
+}
+
+button.btn btn-default {
+    background-color:rgb(26, 57, 26);
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'RobotoMedium', sans-serif;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #000;
+}
+
+footer li {
+    float: left;
+}
+
+footer li a {
+    display: block;
+    color: #c0c0c0;
+    text-align: center;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    background-color: rgb(51, 102, 255);
 }

@@ -35,7 +35,7 @@ year: "2018",
 color: "Blue",
 price: 201225}
 ]
-table = document.getElementById("gallery");             
+table = document.getElementById("gallery");
 
 
 
@@ -58,3 +58,20 @@ table.rows[i].cells[j].innerHTML = carInv[i][j];
 /*function calculateTax(car) {
 return car.price * 1.08;
 } */
+
+// Need to work on this to add decimals
+/*$(".price").keyup(function() {
+  let val = parseFloat($(this).val());
+  val = '$' + value.toFixed(2).replace(/(\d)(?=(\d{3})+$)/g);
+})*/
+
+
+
+// Need to work on this function to add US and other currencies dynamically 11/23/17
+/*function toLocaleStringLocales(price) {
+  let p = new Price();
+  let n = p.toLocaleString();
+  document.getElementById('price').innerHTML = n;
+  console.log(p.toLocaleString());
+
+}*/
