@@ -8,7 +8,7 @@
                 ["Tesla","Model S","2018","Red", 88350,""],
                 ["Bentley","Bentley-Continental","2018","Blue", 201225, ""]
               ];
-        table = document.getElementById("gallery");
+        table = document.getElementById("carTable");
 
   // rows
   for(let i = 0; i < table.rows.length; i++){
@@ -80,8 +80,8 @@
 
     function scaleVideoContainer() {
 
-        var height = $(window).height() + 5;
-        var unitHeight = parseInt(height) + 'px';
+        let height = $(window).height() + 5;
+        let unitHeight = parseInt(height) + 'px';
         $('.homepage-hero-module').css('height',unitHeight);
 
     }
@@ -99,7 +99,7 @@
 
     function scaleBannerVideoSize(element){
 
-        var windowWidth = $(window).width(),
+        let windowWidth = $(window).width(),
         windowHeight = $(window).height() + 5,
         videoWidth,
         videoHeight;
@@ -107,7 +107,7 @@
         // console.log(windowHeight);
 
         $(element).each(function(){
-            var videoAspectRatio = $(this).data('height')/$(this).data('width');
+            let videoAspectRatio = $(this).data('height')/$(this).data('width');
 
             $(this).width(windowWidth);
 
@@ -123,52 +123,29 @@
 
         });
     }
-    // error message display when car not found
-    $(function() {
-        let carsInv = ["Jaguar", "BMW", "Cadillac", "Tesla", "Mercedes Benz", "Bentley"];
-
-        var carNotFound = "Oops, that item was not found..";
-
-        $("#cars").autocomplete({
-            source: function(request, response) {
-                var results = $.ui.autocomplete.filter(carsInv, request.term);
-
-                if (!results.length) {
-                    results = [carNotFound];
-                }
-
-                response(results);
-            },
-            select: function (event, ui) {
-                if (ui.item.label === carNotFound) {
-                    event.preventDefault();
-                }
-            },
-            focus: function (event, ui) {
-                if (ui.item.label === carNotFound) {
-                    event.preventDefault();
-                }
-            }
-        });
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*  $('#intro').videoUI({
-    'autoHide':false,
-    'volumeMedia': 1
-  });*/
+    $(document).ready(function() {
+      $('#cars').keyup(function(){ //input id
+        var valThis = $(this).val().toLowerCase();
+          var noresult = 0;
+      if(valThis == ""){
+          $('#cdbody > tr').show(); //table id
+          noresult = 1;
+  	    $('.no-results-found').remove();
+      } else {
+          $('#cdbody > tr').each(function(){
+              var text = $(this).text().toLowerCase();
+              var match = text.indexOf(valThis);
+              if (match >= 0) {
+                  $(this).show();
+                  noresult = 1;
+  		        $('.no-results-found').remove();
+              } else {
+                  $(this).hide();
+              }
+          });
+     };
+      if (noresult == 0) {
+          $("#cdbody").append('<td class="no-results-found">No results found.</td>');
+      }
+  });
+});

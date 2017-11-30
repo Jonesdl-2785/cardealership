@@ -22,7 +22,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
 </head>
 
 <body>
@@ -40,69 +39,70 @@
       </ul>
       <form class="navbar-form navbar-left">
   <div class="form-group">
-    <input type="text" id="cars"class="form-control" placeholder="Search">
+    <input type="text" id="cars" class="form-control" placeholder="  Search">
       <button class="btn btn-default" type="submit">
         <i class="glyphicon glyphicon-search"></i></button>
   </div>
 </form>
 </div>
 </nav>
+
   <div class="container">
     <h2>Inventory</h2>
     <div class="row">
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
+        <a href="/Users/ThedWord/desktop/cardealership/images/Jaguar F-Type.jpg" class="thumbnail">
                         <img src="/Users/ThedWord/Desktop/cardealership/images/Jaguar F-Type.jpg" class="img-thumbnail" alt="Jaguar F-Type">
                         <div class="caption">
                             <p><small>JAGUAR <br>Duis eu porta mauris. Sed facilisis nec tellus.</small></p>
                         </div>
                     </a>
-        <button id='jaguar' onclick='calculateTax(carInv[1])'>Jaguar</button>
+        <button type="button" id='jaguar' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[1])'>Jaguar</button>
       </div>
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
-                    <img src="/Users/ThedWord/Desktop/cardealership/images/cadillac xt5.jpg" class="img-thumbnail" alt="Cadillac XTS">
+        <a href="/Users/ThedWord/desktop/cardealership/images/cadillac xt5.jpg" class="thumbnail">
+                    <img src="/Users/ThedWord/Desktop/cardealership/images/cadillac xt5.jpg" class="img-thumbnail" alt="Cadillac XT5">
                     <div class="caption">
                         <p><small>CADILLAC <br>Lorem ipsm facilisis nibh enim, eget volutpat.</small></p></div>
                 </a>
-        <button id='cadillac' onclick='calculateTax(carInv[2])'>Cadillac</button>
+        <button type="button" id='cadillac' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[2])'>Cadillac</button>
       </div>
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
+        <a href="/Users/ThedWord/desktop/cardealership/images/MB AMG GLA.jpg" class="thumbnail">
                     <img src="/Users/ThedWord/Desktop/cardealership/images/MB AMG GLA.jpeg" class="img-thumbnail" alt="Mercedes Benz">
                     <div class="caption">
                         <p><small>MERCEDES BENZ<br>Ipsum glod facilisis nibh enim, eget volutpat.</small></p></div>
                 </a>
-        <button id='mercedes' onclick='calculateTax(carInv[3])'>Mercedes Benz</button>
+        <button type="button" id='mercedes' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[3])'>Mercedes Benz</button>
       </div>
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
+        <a href="/Users/ThedWord/desktop/cardealership/images/2018-BMW-2-Series-Convertible-image.jpg" class="thumbnail">
                     <img src="/Users/ThedWord/Desktop/cardealership/images/2018-BMW-2-Series-Convertible-image.jpg" class="img-thumbnail" alt="BMW">
                     <div class="caption">
                         <p><small>BMW<br>Lorem tincidunt libero sit amet sodales temp.</small></p></div>
                 </a>
-        <button id='bmw' onclick='calculateTax(carInv[4])'>BMW</button>
+        <button type="button" id='bmw' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[4])'>BMW</button>
       </div>
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
+        <a href="/Users/ThedWord/desktop/cardealership/images/Bentley-Continental-GT-2018-top-image-853616.jpg" class="thumbnail">
                     <img src="/Users/ThedWord/Desktop/cardealership/images/Bentley-Continental-GT-2018-top-image-853616.jpg" class="img-thumbnail" alt="Bentley">
                     <div class="caption">
                         <p><small>BENTLEY<br>Vestibulum facilisis nibh enim, eget volutpat.</small></p></div>
                 </a>
-        <button id='bentley' onclick='calculateTax(carInv[5])'>Bentley</button>
+        <button type="button" id='bentley' class="btn btn-primary btn-xs" role="button" onclick='calculateTax(carInv[5])'>Bentley</button>
       </div>
       <div class="col-md-2">
-        <a href="#" class="thumbnail">
+        <a href="/Users/ThedWord/desktop/cardealership/images/tesla-model-s.jpg" class="thumbnail">
                     <img src="/Users/ThedWord/Desktop/cardealership/images/tesla-model-s.jpg" class="img-thumbnail" alt="Tesla Model S">
                     <div class="caption">
                         <p><small>TESLA<br>Aliquam tincidunt libero sit amet sodales.</small></p></div>
                 </a>
-        <button id='tesla' onclick='calculateTax(carInv[6])'>Tesla</button>
+        <button type="button" id='tesla' class="btn btn-primary btn-xs" onclick='calculateTax(carInv[6])'>Tesla</button>
       </div>
     </div>
   </div>
 
-  <table id="gallery" class="table table-hover" border="2">
+  <table id="carTable" class="table table-hover" border="2">
     <thead>
       <tr>
         <th>Make</th>
@@ -113,7 +113,7 @@
         <th>Total Price</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="cdbody">
       <tr>
         <td class="make"></td>
         <td class="model"></td>
@@ -171,9 +171,7 @@
     </tbody>
   </table>
   <br>
-  <div>
-    <button id="carsBtns" onclick="getCar()"></button>
-  </div>
+
   <div class="container">
     <!-- Gallery -->
     <section>
@@ -237,7 +235,6 @@
       </div>
     </section>
 
-
     <!-- external js -->
     <script src="/Users/ThedWord/Desktop/cardealership/js/cars.js"></script>
     <footer class="footer">
@@ -247,6 +244,7 @@
          <li><a href="https://www.linkedin.com/in/diane-jones-21a0037/">LinkedIn</a></li>
         </ul>
     </footer>
+
 </body>
 
 </html>
