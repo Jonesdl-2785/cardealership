@@ -207,7 +207,6 @@ nav {
     position: relative;
     height: 100vh;
     width: 100vw;
-    border: 2px solid red;
     background-color:   #d4dce8;
 }
 .no-video .video-container video,
@@ -344,6 +343,10 @@ p.copyright {
     font-family: RobotoRegular,Arial;
     font-size: 13px;
     margin-top: 30px;
+}
+
+.copyright {
+  float: right;
 }
 
 a.go_top {
